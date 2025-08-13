@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JMS Mining Pvt Ltd</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* Header styling */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .logo-text {
+            font-size: 32px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .iso-info {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.4;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            margin-left: 25px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #666;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #db8026;
+        }
+
+        /* Main content area with background image */
+        .hero-section {
+            background-image: url("https://jmsmining.com/wp-content/uploads/2024/03/4-1.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            margin-top: 60px;
+        }
+
+        /* Adjustments for a clean layout */
+        .header .header-left .logo {
+            margin-right: 15px;
+        }
+
+        .header .header-left .iso-info {
+            border-left: 1px solid #e3dede;
+            padding-left: 15px;
+        }
+
+        /* New CSS for the content sections */
+        .content-section {
+            padding: 40px 10%;
+            background-color: #fff;
+            line-height: 1.6;
+        }
+        .content-hover{
+            transform: scale(1.05);
+        }
+
+        .content-section h2 {
+            font-size: 32px;
+            color: #000;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .content-section h2.expertise {
+            text-align: left;
+        }
+
+        .content-section h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #ff6600;
+            margin: 10px auto 20px;
+        }
+
+        .content-section h2.expertise::after {
+            margin: 10px 0 20px 0;
+        }
+        
+        .content-section p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .expertise-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .expertise-section img {
+            width: 300px;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .expertise-text {
+            flex: 1;
+        }
+
+        .people-section {
+            margin-top: 40px;
+        }
+
+        /* Visitor counter section */
+        .visitor-counter-section {
+            background-image: url("https://jmsmining.com/wp-content/uploads/2024/03/4-1.jpg");
+            background-size: cover;
+            background-position: bottom;
+            position: relative;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+
+        /* Overlay for the visitor counter section */
+        .visitor-counter-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        
+        .counter-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .counter-number {
+            font-size: 4em;
+            font-weight: bold;
+            margin: 0;
+            color: #fff;
+        }
+
+        .counter-label {
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 10px;
+            color: #fff;
+        }
+
+        /* New styles for the Key Management Personal section */
+        .key-management-section {
+            background-image: url("https://jmsmining.com/wp-content/uploads/2024/03/4-1.jpg");
+            background-size: cover;
+            background-position: center;
+            padding: 80px 10%;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .key-management-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+        
+        .key-management-section .section-title {
+            position: relative;
+            z-index: 2;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .key-personnel-container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .key-person {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            max-width: 350px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .key-person:hover {
+            transform: translateY(-10px);
+        }
+
+        .key-person img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ff6600;
+            margin-bottom: 15px;
+        }
+
+        .key-person h3 {
+            font-size: 20px;
+            color: #000;
+            margin: 0 0 10px 0;
+        }
+
+        .key-person p {
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: left;
+            padding: 0 10px;
+            margin-bottom: 20px;
+        }
+
+        .key-person .read-more {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .key-person .read-more:hover {
+            background-color: #e05c00;
+        }
+
+        .highlights-section {
+            padding: 40px 10%;
+            background-color: #fff;
+        }
+
+        .highlights-section h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        .highlights-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .highlights-section li {
+            background-color: #f9f9f9;
+            margin: 10px 0;
+            padding: 15px;
+            border-left: 4px solid #ff6600;
+            line-height: 1.6;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #d17800; /* Orange color from the image */
+            color: #fff;
+            padding: 60px 10%;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: #fff;
+            margin-top: 10px;
+        }
+
+        .footer-about p {
+            font-size: 14px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .footer-links ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .footer-links li {
+            width: calc(50% - 7.5px);
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links a::before {
+            content: '›';
+            font-size: 1.2em;
+            margin-right: 8px;
+            color: #fff;
+        }
+
+        .footer-contact .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        .footer-contact .contact-item svg {
+            width: 20px;
+            height: 20px;
+            fill: #fff;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .footer-contact a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .footer-contact a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #ff6600; /* Darker orange for icons */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background-color: #e05c00;
+        }
+
+        .social-icons svg {
+            width: 20px;
+            height: 20px;
+            fill: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 20px;
+            background-color: #c0ad00; /* Slightly darker orange for the copyright bar */
+            font-size: 14px;
+            color: #fff;
+            margin-top: 40px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <span class="logo-text"></span>
+            </div>
+            <div class="iso-info">
+               <img src="https://jmsmining.com/wp-content/themes/jms/assets/images/logo.gif">
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">EHS</a></li>
+                <li><a href="#">Tender</a></li>
+                <li><a href="#">Publications</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero-section">
+            </div>
+
+        <div class="content-section">
+            <h2>WELCOME TO JMS !</h2>
+            <p>JMS Mining Private Limited, hereafter referred as JMS, is the pioneer & market leader in implementation of Mass Production Technology in Underground Coal Mines. Since our inception in 2007, we have been a prominent service provider in Underground Mining Industry. The company has implemented world’s latest technology – Continuous Miner & Bolter Miner in this country. It has presence in major Underground coal mining clusters in the country, namely at BCCL, ECL, CCL, WCL. The company has also executed work for Singareni Collieries Company Ltd., India’s top two coal producing companies, are its esteemed clients.</p>
+            <p>We have introduced Bolter Miner first time in India. We have introduced system for Real Time Prediction of roof caving in developing operation. We maintain our assets by following the best practices in the Industry. We do our everyday activities at all places and levels. Our Life Cycle Management for underground mines is the best in its class. We manufacture support materials to maintain a safe working environment at the mines and ensure their easy availability of the same.</p>
+            <p>We have owned three Commercial Coal Blocks in the auction organised by MoC. We have bagged two MDO projects in CCL & ECL. Also, JMS received an award for 'Best Employer' in Manufacturing Workplace for FY 2022-23 presented by Marksmen Daily and India Today TV Initiative.</p>
+        </div>
+
+        <div class="content-section expertise-section">
+            <img src="https://jmsmining.com/wp-content/uploads/2024/03/about.jpg" alt="Mining Expertise">
+            <div class="expertise-text">
+                <h2 class="expertise">Our Expertise</h2>
+                <p>JMS offers multifarious and of superior quality mining services – Geo-technical investigations, mine planning and designing, preparation of detailed project reports, mine operation, development of mines related infrastructures, supply of state-of-the-art mining equipment are major of them. Its strata control & monitoring system are of world class level. EHS Management System is as per national and global norms.</p>
+           <h2 class="expertise">Our People & Foundation</h2>
+            <p>At JMS, the driving philosophy behind their service is 'quality begets quality'. The enterprise has an army of competent, technically qualified people, minimum qualification being ITI. Talent, imbued with responsibility, coupled with continuous empowerment and leadership. Apart from a talented team, what sets JMS apart from its contemporaries is its network of reputed manufacturers and consultants. Our invaluable human resource, coupled with our management principles, policies, is integral to JMS' steady rise in the nation's energy sector.</p>
+            </div>
+        </div>
+        
+        <div class="visitor-counter-section">
+            <div class="counter-content">
+                <h1 class="counter-number" id="visitor-count">10128</h1>
+                <p class="counter-label">VISITORS COUNTER</p>
+            </div>
+        </div>
+        <div class="key-management-section">
+            <h2 class="section-title">KEY MANAGEMENT PERSONAL</h2>
+            <div class="key-personnel-container">
+                <div class="key-person">
+                    <img src="https://jmsmining.com/wp-content/uploads/2024/03/p1.jpg" alt="Mr. Amitabh Das Mundhra">
+                    <h3>Mr. Amitabh Das Mundhra</h3>
+                    <p>Mr Amitabh Das Mundhra is the Promoter Director of JMS Mining Private Limited. He sits on several boards on infrastructure, mining and associated industries he is also..</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                <div class="key-person">
+                    <img src="https://jmsmining.com/wp-content/uploads/2024/03/p4.jpg" alt="Mr. Kalyan Kumar Hajra">
+                    <h3>Mr. Kalyan Kumar Hajra</h3>
+                    <p>Sri Kalyan Kumar Hajra is the Director in JMS Mining Private Limited. He graduated in Mining Engineering from Bengal Engineering College, Shibpur, University of Calcutta..</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                <div class="key-person">
+                    <img src="https://jmsmining.com/wp-content/uploads/2024/03/p1.jpg" alt="Mr. Amitabh Das Mundhra">
+                    <h3>Mr. Amitabh Das Mundhra</h3>
+                    <p> Mr. Amitabh Das Mundhra is the Promoter Director of JMS Mining Private Limited. He sits on several boards on infrastructure, mining and associated industries he is also...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column footer-about">
+                <h3>About</h3>
+                <p>JMS Mining Private Limited, hereafter referred as JMS, is the pioneer & market leader in <br>
+                    implementation of Mass Production Technology in Underground Coal Mines.</p>
+                <p>Since our inception in 2007, we have been a prominent service provider in Underground Mining Industry.</p>
+            </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>2024 © All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

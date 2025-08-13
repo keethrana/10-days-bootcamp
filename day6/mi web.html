@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            background-color: rgb(224, 230, 224);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav1 ul{
+            display: flex;
+            justify-content: space-evenly;
+            list-style-type: none;
+        }
+        .nav2 ul{
+            display: flex;
+            justify-content: space-evenly;
+            list-style-type: none;
+        }
+        .nav1{
+            width: 40%;
+        }
+        .nav2{
+            width: 60%;
+        }
+        .fullnav{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .container{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        .container.pro{
+            width: 250;
+            height: 300;
+        }
+        .pro img:hover{
+             transform: scale(1.07);
+        }
+        .pro img{
+            height: 80;
+            width: 100;
+        }
+        .pro{
+            border: 2px;
+            text-align: center;
+            background-color: rgb(250, 248, 247);
+        }
+        .nav3 ul{
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            list-style-type: none;
+        }
+        .features{
+            text-align: center;
+        }
+        .text{
+            text-align: center;
+
+        }
+
+        .phone{
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-left: 50px;
+        }
+
+        .phone img{
+            height: 350px;
+            border-bottom-left-radius: 20px;
+        }
+
+        .fullcontainer{
+            width: 90%;
+            background-color: rgb(225, 214, 214);
+            border-radius: 10px;
+            height: 110vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+           
+        }
+
+        .outer{
+            display: flex;
+            justify-content: center;
+            
+        }
+
+        .phone .text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+        }
+
+        .phone .banner{
+            border: 2px solid black;
+            height: 30px;
+            width: 2px;
+            font-size: 30px;
+            background-color: black;
+            border-radius:20px ;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="fullnav">
+        <nav class="nav1">
+            <ul>
+                <li>home</li>
+                <li>about</li>
+                <li>brand</li>
+                <li>Tools</li>
+                <li>Tv&smart Home</li>
+                <li>help</li>
+            </ul>
+        </nav>
+            <nav class="nav2">
+                <ul>
+                    <li>support</li>
+                    <li>cart</li>
+                    <li>Login</li>
+                    <li>discover</li>
+                </ul>
+            </nav>
+        </div>
+    
+    </header>
+    <main>
+        <div class="features">
+            <h1>Featured Products</h1>
+             <nav class="nav3">
+                <ul>
+                    <li><b>phones</b></li>
+                    <li><b>smart tv</b></li>
+                    <li><b>tablets</b></li>
+                    <li><b>lifestyle</b></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="outer">
+
+            <div class="fullcontainer">
+    
+                <div class="phone">
+                    <div>
+                        <img src="https://i03.appmifile.com/615_operator_in/18/12/2024/d7d6da3e85354cfa22fa33b7f39e7f60.png?thumb=1&w=1320&f=webp&q=85" alt="mobile">
+                    </div>
+                    <div class="text">
+                            <h1>Redmi Note 14 Series</h1>
+                            <br>
+                            <h2>Lowest Price Ever</h2>
+                            <h2>Starting at ₹16,999*</h2>
+                            <br>
+                            <br>
+                            <div class="banner">
+                                Learn More
+                            </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="pro">
+                        <img src="https://i03.appmifile.com/286_item_in/17/03/2025/3f5872ded299b098ae2e2d811703969b.png?thumb=1&w=320&f=webp&q=85" alt="mobile">
+                        <p>Xiaomi 15</p>
+                    </div>
+                    <div class="pro">
+                        <img src="https://i03.appmifile.com/384_item_in/21/01/2025/57e74ae437499b7bcc66a9a62b07eaf3.png?thumb=1&w=320&f=webp&q=85" alt="mobile">
+                        <p>Redmi Note 14 Pro+ 5G</p>
+                    </div>
+                    <div class="pro">
+                        <img src="https://i03.appmifile.com/385_item_in/21/01/2025/534f2e609ee27aebd1b04114efe98552.png?thumb=1&w=320&f=webp&q=85" alt="mobile">
+                        <p>Redmi Note 14 Pro 5G</p>
+                    </div>
+                    <div class="pro">
+                        <img src="https://i03.appmifile.com/270_item_in/11/04/2025/7c4e711621bb12e2c405bfc9e38aa17d.png?thumb=1&w=320&f=webp&q=85" alt="mobile">
+                        <p>Redmi A5</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

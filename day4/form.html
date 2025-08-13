@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Form</title>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome6.0.0beta/css/all.min.css">
+    <style>
+
+        form{
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            height: 300px;
+            justify-content: space-evenly;
+            align-items: center;
+            border-radius: 10px;
+            position:relative;
+        }
+
+        .inp{
+            display: flex;
+            border: 2px solid black;
+            padding: 10px;
+            align-items: center;
+        }
+
+        .inp input{
+            border: 0;
+            border-radius: 60px solid black;
+            height: 100%;
+            width: 100%;
+        }
+
+        .inp input:focus{
+            border: 0;
+            outline: none;
+
+        }
+        .from input{
+            width: 50px;
+            height: 20px;
+            border-radius: 20px;
+
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            height: 100px;
+            width: 50px;
+
+        }
+        .banner{
+            box-shadow:10px 10px 5px rgb(221, 187, 65);
+            border: 2px solid rgb(128, 101, 56);
+            padding:10px;
+            height: 30px;
+            width: 200px;
+            text-anchor: center;
+            background-color: coral;
+            border-radius: 20px;
+            justify-content: center;
+            position:absolute;
+            top: -27px;
+        }
+    </style>
+</head>
+<body>
+    
+
+<form>
+    <div class ="banner">
+        LOGIN CARD
+    </div>
+    <div class="inp">
+        <label for="user">
+            <i class="fa-regular fa-circle-user"></i>
+        </label>
+        <input type="text"placeholder="USERNAME" id ="user">
+        </div>
+
+     <div class="inp">
+            <i class="fa-regular fa-hand"></i>
+            <input type="text"placeholder="PASSWORD"> 
+     </div>
+
+     <button>LOGIN</button>  
+    </form>
+    
+</body>
+</html>

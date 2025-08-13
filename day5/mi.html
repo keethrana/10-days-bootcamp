@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI </title>
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+       }
+        .nav1 ul{
+            display: flex;
+            justify-content: space-evenly;
+            list-style-type: none;
+        }
+         .nav2 ul{
+            display: flex;
+            justify-content: space-evenly;
+            list-style-type: none;
+
+        }
+        .nav1{
+            width: 60%;
+        }
+        .nav2{
+            width: 40%;
+        }
+        .fullnav{
+            display: flex;
+            justify-content: space-evenly;
+            background-color:rgb(126, 140, 147);
+            position:fixed;
+    
+           
+        }
+        /* .heading{
+            background-color: black;
+            color:white;
+            padding: 60px 20px;
+            text-align: center;
+        } */
+         .card {
+            width: 300px;
+            height: 400px;
+            border-radius: 10px;
+            
+        }
+         .card:hover{
+            transform: scale(1.07);
+        } 
+        .television{
+            background-color: white(226, 226, 225);
+            padding: 60px 20px;
+        }
+        .card img{
+            height: 80%;
+            width: 100%;
+        }
+        .container{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: center;
+        }
+        .container.card{
+            height: 300;
+            width: 250;
+            
+        }
+        .card img{
+            height: 80;
+            width: 100%;
+            
+        }
+        .card{
+            border: 2px;
+            text-align: center;
+            background-color:rgb(202, 185, 158);
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="fullnav">
+        <nav class="nav1">
+            <ul>
+                <li>Store</li>
+                <li>Brand</li>
+                <li>Phones</li>
+                <li>TV&Smart</li>
+                <li>Smart watch</li>
+
+            </ul>
+        </nav>
+        <nav class="nav2">
+            <ul>
+                <li>Sign</li>
+                <li>Discover</li>
+                <li>Support</li>
+                <li>Help</li>
+            </ul>
+        </nav>
+        <div class="television">
+             <img src="">
+        </div> 
+    </header>
+    
+    <main>
+        <div class ="container">
+             <div class="card">
+                <img src="https://i03.appmifile.com/286_item_in/17/03/2025/3f5872ded299b098ae2e2d811703969b.png?thumb=1&w=320&f=webp&q=85">
+                <p>Xiaomi 15</p>
+            </div>
+            <div class="card">
+                <img src="https://i03.appmifile.com/384_item_in/21/01/2025/57e74ae437499b7bcc66a9a62b07eaf3.png?thumb=1&w=320&f=webp&q=85">
+                <p>Redmi Note 14 Pro+ 5G</p>
+            </div>
+            <div class="card">
+                <img src="https://i03.appmifile.com/385_item_in/21/01/2025/534f2e609ee27aebd1b04114efe98552.png?thumb=1&w=320&f=webp&q=85">
+                <p>Redmi Note 14 Pro 5G</p>
+            </div>
+            <div class="card">
+                <img src="https://i03.appmifile.com/270_item_in/11/04/2025/7c4e711621bb12e2c405bfc9e38aa17d.png?thumb=1&w=320&f=webp&q=85">
+                <p>Xiaomi 15 Ultra</p>
+            </div>
+        </div>
+        <h1>Featured Products</h1>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny Miny Mo  Keychains</title>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome6.0.0beta/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        
+        
+        header {
+            background-color: rgb(247, 245, 245);
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .banner{
+            box-shadow:10px 10px 5px rgb(221, 187, 65);
+            border: 2px solid rgb(128, 101, 56);
+            padding:10px;
+            height: 30px;
+            width: 200px;
+            text-anchor: center;
+            background-color: coral;
+            border-radius: 20px;
+            justify-content: center;
+            position:absolute;
+            top: -27px;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff6b6b;
+            display: flex;
+            background-color: white;
+            margin-top: 15px;
+        }
+
+        .fullnav {
+            display: flex;
+            position: fixed;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            top: 0;
+        }
+                
+        
+        nav {
+            margin-top: 15px;
+
+        }
+        
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .search-bar input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+         }
+
+
+        .search-bar button {
+            padding: 8px 12px;
+            background-color: #54ac54;
+            color: white;
+            border: 0;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        
+        .container {
+            max-width: 1400px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-bottom: 100px;
+            font-size: 28px;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .product-card {
+            background: rgba(153, 199, 121, 0.871);
+            border-radius: 8px;
+           /*  overflow: hidden; */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .para-sec {
+            padding: 2px;
+            justify-content: space-evenly;
+            text-align: center;  
+
+        }
+        
+        /* .product-card:hover {
+            transform: translateY(-5px);
+        } */
+        
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .product-title {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .product-price {
+            font-weight: bold;
+            color: #a60707;
+        }
+        
+        footer {
+            background-color: #333;
+            color: rgb(242, 229, 229);
+            list-style-type: none;
+            text-decoration: none;
+            
+        }
+        .quick-links-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            list-style-type: none;
+            text-decoration: none;
+        }
+        .links-section{
+            list-style-type: none;
+            text-decoration: none;
+
+        }
+    
+    </style>
+</head>
+<body>
+  <!--   <form>
+    <div class ="banner">
+        LOGIN CARD
+    </div>
+    <div class="inp">
+        <label for="user">
+            <i class="fa-regular fa-circle-user"></i>
+        </label>
+        <input type="text"placeholder="USERNAME" id ="user">
+        </div>
+
+     <div class="inp">
+            <i class="fa-regular fa-hand"></i>
+            <input type="text"placeholder="PASSWORD"> 
+     </div>
+
+     <button>LOGIN</button>  
+    </form> -->
+    <header>
+        <nav><div class="logo">Tiny Miny Mo</div></nav>
+        <div class="fullnav"> 
+            
+        <nav>
+            <a href="#">Gifts</a>
+            <a href="#">Shop</a>
+            <a href="#">Keychains</a>
+            <a href="#">Home decor</a>
+            <a href="#">Home </a>
+            <a href="#">Personal</a>
+            <a href="#">Out of the Box</a>
+            <a href="#">Contact</a>
+        </nav>
+        </div>
+         <div class ="Search-bar">
+            <input type="text" placeholder="search">
+            <button>Search</button>
+            <a href="#loginModal"style="color:#fff;">Login</a> 
+        </div></nav>  
+    </header>
+    
+    <div class="container">
+        <h1 class="page-title">Keychains Collection</h1>
+        
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://www.tinyminymo.com/cdn/shop/files/Wall-E-3D-Keychain-3_360x.png?v=1741538602" alt="Keychain 1" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Cute Animal Keychain</h3>
+                    <p class="product-price">Rs.12.99</p>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://www.tinyminymo.com/cdn/shop/files/Plush-Shin-chan-3D-Keychain-7_360x.png?v=1742553966" alt="Keychain 2" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Rainbow Unicorn Keychain</h3>
+                    <p class="product-price">Rs.14.99</p>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://www.tinyminymo.com/cdn/shop/files/Kuromi-Calculator-Keychain-6_180x.jpg?v=1741538085" alt="Keychain 3" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Mini Food Keychain</h3>
+                    <p class="product-price">Rs.11.99</p>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="https://www.tinyminymo.com/cdn/shop/files/Starbucks-Employe-Bear-3D-Keychain-6_180x.jpg?v=1741538621" alt="Keychain 4" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Starbucks Employee Bear 3D Keychain</h3>
+                    <p class="product-price">Rs.15.99</p>
+                </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="product-card">
+                <img src="https://www.tinyminymo.com/cdn/shop/files/Starbucks-Employe-Bear-3D-Keychain-6_180x.jpg?v=1741538621" alt="Keychain 5" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Harry Potter Multi Charm Metal Keychain</h3>
+                    <p class="product-price">Rs.22.99</p>
+                </div>
+            </div>
+             <!-- Product 6 -->
+            <div class="product-card">
+                <img src="https://www.tinyminymo.com/cdn/shop/files/Harry-Potter-Multi-Charm-Metal-Keychain-2_180x.png?v=1741538593" alt="Keychain 6" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Cute Plush Coin Pouch Keychain</h3>
+                    <p class="product-price">Rs.99.99</p>
+                </div>
+            </div>
+             <!-- Product 7 -->
+            <div class="product-card">
+                <img src="https://www.tinyminymo.com/cdn/shop/files/Cute-Plush-Coin-Pouch-Keychain-7_180x.png?v=1745585720" alt="Keychain 7" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Lightup Sanrio Keychain</h3>
+                    <p class="product-price">Rs.56.99</p>
+                </div>
+            </div>
+             <!-- Product 8 -->
+            <div class="product-card">
+                <img src="https://www.tinyminymo.com/cdn/shop/files/Lightup-Sanrio-Keychain-20_180x.png?v=1754048332" alt="Keychain 8" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Plush Penguin 3D Keychain</h3>
+                    <p class="product-price">Rs.78.99</p>
+                </div>
+            </div>
+             <!-- Product 9 -->
+            <div class="product-card">
+                <img src="https://www.tinyminymo.com/cdn/shop/files/Plush-Animal-Cosplay-3D-Keychain-15_180x.png?v=1743424101" alt="Keychain 9" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Lilo and Stitch 3D Keychain</h3>
+                    <p class="product-price">Rs.89.99</p>
+                </div>
+            </div>
+             <!-- Product 10 -->
+            <div class="product-card">
+                <img src="https://www.tinyminymo.com/cdn/shop/files/Plush-Penguin-3D-Keychain-37_180x.png?v=1752039493" alt="Keychain 10" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">How I Met Your Mother - Blue Horn Keychain</h3>
+                    <p class="product-price">Rs.34.99</p>
+                </div>
+            </div>
+             <!-- Product  11-->
+            <div class="product-card">
+                <img src="https://www.tinyminymo.com/cdn/shop/files/Plush-Lucifer-3D-Keychain_180x.png?v=1741540040" alt="Keychain 11" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Fury Dragon 3D Keychain</h3>
+                    <p class="product-price">Rs.56.99</p>
+                </div>
+            </div>
+            <!-- Product  12-->
+            <div class="product-card">
+                <img src="https://www.tinyminymo.com/cdn/shop/files/Plush-Raccoon-3D-Keychain-26_360x.png?v=1743421678" alt="Keychain 12" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Fury Dragon 3D Keychain</h3>
+                    <p class="product-price">Rs.99.99</p>
+                </div>
+            </div>
+            <!-- Product  13-->
+            <div class="product-card">
+                <img src="https://www.tinyminymo.com/cdn/shop/files/Lilo-And-Stitch-3D-Keychain-11_360x.jpg?v=1741540874" alt="Keychain 13" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Starfish 3D Keychain</h3>
+                    <p class="product-price">Rs.78.99</p>
+                </div>
+            </div>
+            <!-- Product  14-->
+            <div class="product-card">
+                <img src="https://www.tinyminymo.com/cdn/shop/products/How-I-Met-Your-Mother-Keychain_360x.jpg?v=1741540931" alt="Keychain 14" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Plush Stitch 3D Keychain</h3>
+                    <p class="product-price">Rs.56.99</p>
+                </div>
+            </div>
+            <!-- Product  15-->
+            <div class="product-card">
+                <img src="https://www.tinyminymo.com/cdn/shop/files/Starfish-3D-Keychain-4_360x.png?v=1749472816" alt="Keychain 15" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Adorable Koala Bear Plush Keychain</h3>
+                    <p class="product-price">Rs.47.99</p>
+                </div>
+            </div><!-- Product  16-->
+            <div class="product-card">
+                <img src="https://www.tinyminymo.com/cdn/shop/files/Asterix-3D-Keychain_360x.jpg?v=1741539434" alt="Keychain 16" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Plush Lucifer 3D Keychain</h3>
+                    <p class="product-price">Rs.90.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="para-sec">
+        <div class="para-insec">
+    <p><h2>KEY TO YOUR STYLE: UNIQUE KEYCHAINS</h2></p><br>
+    <p>Having too many keys is a pain if you don't have something to organise.
+        Car keys, bike keys, house keys, and the list goes on and on. That's when keychains come into play.
+        Keychains might be something that we don't often shop for consciously unless we come across them but they are just as important.
+    
+    </div>
+    </div>
+     <div id="loginModal" class="modal">
+        <div class="modal-content">
+        <a href="#" class="close-btn">&times;</a>
+      <h2>Login</h2>
+      <form>
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+    <footer>
+        <div class="quick-links-container">
+        <div class="links-section">
+            <h3>Quick links</h3>
+            <br>
+            <ul>
+                <li>Search</li>
+                <li>Contact Us</a></li>
+                <li>Tinyminymo - Visit Our Store</li>
+                <li>About Us</li>
+                <li>Shipping Policy</li>
+                <li>Returns & Refund</li>
+                <li>Privacy Policy</li>
+                <li>Terms of Service</li>
+            </ul>
+        </div>
+        
+        <div class="links-section">
+            <h3>Categories</h3>
+            <br>
+            <ul>
+                <li>Gifts</li>
+                <li>Shop by Category</li>
+                <li>Home Decor</li>
+                <li>Home & Personal</li>
+                <li>Stationery Love</li>
+                <li>Bar & Kitchen</li>
+                <li>Out of the Box</li>
+                <li>Tech Essentials</li>
+                <li>Show Me All</li>
+                <li>Shop By Category</li>
+            </ul>
+        </div>
+        
+        <div class="links-section">
+            <h3>Shop By Category</h3>
+            <ul>
+                <br>
+                <li>Unicorn Love</li>
+                <li>Couple Gifts</li>
+                <li>Gifts for Him</li>
+                <li>Gifts For Her</li>
+                <li>Top Selling Products</li>
+                <li>Superhero Fans</li>
+            </ul>
+        </div>
+    </div>
+        <p>&copy; 2023 Tiny Miny Mo. All rights reserved.</p>
+    </footer>
+</body>
+</html>

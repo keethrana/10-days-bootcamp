@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0%;
+        }
+        #container{
+            transition-duration: 3s;
+            position: absolute;
+            background-image:url("./assest/Naruto\ Quotes\ Wallpaper.jpg") ;
+            height: 100vh;
+            width: 100%;
+            background-size: cover;
+        }
+        .mini img{
+            height: 50%;
+            width: 140px;
+            margin: 0px;
+        }
+        .mini{
+            position: absolute;
+            display: flex;
+            bottom: 30px;
+            right: 100px;
+        }
+        .arrow img{
+            height: 50px;
+            width: 40px;
+
+        }
+        #arrow1{
+            top: 50%;
+            position: absolute;
+            right: 0px;
+           /*  transform: rotate(180deg); */
+        }
+        #arrow2{
+            top: 50%;
+            position: absolute;
+            transform: rotate(180deg);
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="arrow">
+            <img id= "arrow1" onclick="changeimg()" src="./assest/rigth.png" alt="loding">
+             <img id="arrow2" onclick="changeimg()" src="./assest/rigth.png" alt="loding">
+        </div>
+
+        <div class="mini">
+            <img src="./assest/35.jpg.webp" alt="loding">
+            <img src="./assest/26.jpg" alt="loding">
+            <img src="./assest/bat.jpg" alt="loding">
+           
+        </div>
+    </div>
+    <script src="landing.js"></script>
+</body>
+</html>

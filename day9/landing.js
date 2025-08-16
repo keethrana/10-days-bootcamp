@@ -8,25 +8,26 @@ const arr=["./assest/Naruto\ Quotes\ Wallpaper.jpg",
 
 ]
 
-let i=1;
-let next=()=>{
-    if(i==arr.length)
+let i = 1;
+let next= () => {
+    if(i == arr.length)
     {
-        i=0;
+        i = 0;
     }
     con.style.backgroundImage=`url('${arr[i]}')`;
     i++;
 }
 
-let i=1;
-let prev=()=>{
+
+let prev = ()=> {
     
-    if(i==5)
+    if(i == 0)
     {
-        i=0;
+        i = arr.length - 1;
+    } else {
+        i--;
     }
     con.style.backgroundImage=`url('${arr[i]}')`;
-    i++;
 }
 
 

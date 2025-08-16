@@ -3,11 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MX PLAY</title>
     <style>
         * {
             margin: 0%;
         }
+        nav{
+            width: 100%;
+            background:rgba(0,0,0,0.7);
+            color:aliceblue;
+            padding: 15px 0;
+            position:fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 0;
+            padding: 0;
+
+        }
+        nav ul li a {
+            color: antiquewhite;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-family: arial,sans-serif;
+            transition: color 0.3s;
+
+        }
+        nav ul li a:hover{
+            color:blue;
+        }
+    
         #container{
             transition-duration: 3s;
             position: absolute;
@@ -45,12 +76,20 @@
             
         }
     </style>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 </head>
 <body>
     <div id="container">
         <div class="arrow">
-            <img id= "arrow1" onclick="changeimg()" src="./assest/rigth.png" alt="loding">
-             <img id="arrow2" onclick="changeimg()" src="./assest/rigth.png" alt="loding">
+            <img id= "arrow1" onclick="next()" src="./assest/rigth.png" alt="loding">
+             <img id="arrow2" onclick="prev()" src="./assest/rigth.png" alt="loding">
         </div>
 
         <div class="mini">

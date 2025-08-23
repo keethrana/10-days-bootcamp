@@ -13,21 +13,35 @@
             background-size: cover;
             background-position: center;
         }
-        .slider {
+        /* .slider {
             position: relative;
             width: 300px;
             height: 200px;
             margin: 50px auto;
             background: #eee;
             display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .slider img {
+            align-items: last baseline;
+            justify-content:flex-end;
+            transition: 0s; 
+        } */
+        /* .slider img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }  */
+        .slider img{
+            height: 50%;
+            width: 140px;
+            margin: 0px;
         }
+        .slider{
+            position: fixed;
+            display: flex;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1100;
+        }
+       
         .arrow {
             height: 0.1vh;
             width: 0.2vh;
@@ -102,9 +116,10 @@
             justify-content: center;
             align-items: flex-start;
             padding-left: 60px;
-            color: #fcf8f8;
+            color: #ce19c5;
             background: linear-gradient(to top, rgba(20,20,20,0.8) 60%, rgba(20,20,20,0.2) 100%);
-            background-image:url("https://i.redd.it/zjgs096khv591.jpg");
+            /* background-image:url("https://i.redd.it/zjgs096khv591.jpg"); */
+            background-image: url("https://www.hollywoodreporter.com/wp-content/uploads/2025/02/The-Ba___ds-of-Bollywood_Netflix_857616_v001.0001.jpg?w=1296&h=730&crop=1");
         }
         .hero-title {
             font-size: 3em;
@@ -122,7 +137,7 @@
         }
         .hero-buttons button {
             background: #e00c1a;
-            color: #fff;
+            color: #e7e6ea;
             border: none;
             padding: 12px 32px;
             font-size: 1.1em;
@@ -142,18 +157,6 @@
             width: 100%;
             background-size: cover;
         }
-        .mini img{
-            height: 50%;
-            width: 140px;
-            margin: 0px;
-        }
-        .mini{
-            position: fixed;
-            display: flex;
-            bottom: 30px;
-            right: 30px;
-            z-index: 1100;
-        }
        
     </style>
 </head>
@@ -169,29 +172,40 @@
         </ul>
         <span class="profile">Profile</span>
     </div>
-    <div class="hero">
+    <div id="container">
         <div class="arrow">
-            <img class= "arrow1" onclick="next()" src="./assest/rigth.png" alt="loding">
-             <img class="arrow2" onclick="prev()" src="./assest/rigth.png" alt="loding">
+            <img id= "arrow1" onclick="next()" src="./assest/rigth.png" alt="loding">
+             <img id="arrow2" onclick="prev()" src="./assest/rigth.png" alt="loding">
         </div>
-       
-    <!--
-         <div class="arrow">
-                <img class="arrow1" onclick="nextBg()" src="" alt="Next" style="cursor:pointer; margin-right:10px;">
-                <img class="arrow2" onclick="prevBg()" src="" alt="Previous" style="cursor:pointer;">
-        </div> -->
-         <div class="mini">
+        
+         <div class="slider">
             <img src="https://imageio.forbes.com/specials-images/imageserve/67359a8c6331660e9efb8bac/0x0.jpg?format=jpg&crop=1920,1080,x0,y0,safe&height=600&width=1200&fit=bounds" alt="loding">
             <img src="https://assets.gqindia.com/photos/67c033f43f0f13336ec24167/16:9/w_2560%2Cc_limit/bollywood-movies-on-netflix-amazon-prime-video-hotstar-quarantine.jpg" alt="loding">
             <img src="https://static.toiimg.com/thumb/msid-117249524,width-1070,height-580,imgsize-77990,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg" alt="loding">
         </div>
-        <div class="hero-title"></div>
-        <div class="hero-desc">.</div>
-        <div class="hero-buttons">
-            <button>Play</button>
-            <button>More Info</button>
-        </div>
-    </div>
+       
+    <script src="landing.js"></script>
+     <script>
+    const bgImages = [
+        "https://imageio.forbes.com/specials-images/imageserve/67359a8c6331660e9efb8bac/0x0.jpg?format=jpg&crop=1920,1080,x0,y0,safe&height=600&width=1200&fit=bounds",
+        "https://assets.gqindia.com/photos/67c033f43f0f13336ec24167/16:9/w_2560%2Cc_limit/bollywood-movies-on-netflix-amazon-prime-video-hotstar-quarantine.jpg",
+        "https://static.toiimg.com/thumb/msid-117249524,width-1070,height-580,imgsize-77990,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg"
+    ];
+    let bgIndex = 0;
+    function setBg(idx) {
+        document.querySelector('.hero').style.backgroundImage = `linear-gradient(to top, rgba(20,20,20,0.8) 60%, rgba(20,20,20,0.2) 100%), url('${bgImages[idx]}')`;
+    }
+    function nextBg() {
+        bgIndex = (bgIndex + 1) % bgImages.length;
+        setBg(bgIndex);
+    }
+    function prevBg() {
+        bgIndex = (bgIndex - 1 + bgImages.length) % bgImages.length;
+        setBg(bgIndex);
+    }
+    // Initialize background
+    setBg(bgIndex);
+    </script>
     
    
 </body>

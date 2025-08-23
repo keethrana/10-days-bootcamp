@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny Miny Mo  Keychains</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        /* ---------------- Header ---------------- */
+        header {
+            background-color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .headercontainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 24px;
+            color: #e1a365;
+            font-weight: bold;
+        }
+        
+        .nav1 {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav1 a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px;
+            transition: color 0.3s;
+        }
+
+        .nav1 a:hover {
+            color: #65cee1;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-bar input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .search-bar button {
+            padding: 8px 12px;
+            background-color: #006400;
+            color: white;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .login-button {
+            padding: 8px 12px;
+            background-color: #e1a365;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background-color: #3794b3;
+        }
+
+        /* ---------------- Slider (from 2nd code) ---------------- */
+        #container {
+            transition-duration: 2s;
+            position: relative;
+            background-image: url(./asserts/images.jpeg);
+            height: 100vh;
+            width: 100%;
+            background-size: cover;
+        }
+        .mini img {
+            height: 80px;
+            width: 140px;
+            cursor: pointer;
+        }
+        .mini {
+            position: absolute;
+            display: flex;
+            gap: 10px;
+            bottom: 30px;
+            right: 100px;
+        }
+        .arrow img {
+            height: 60px;
+            width: 50px;
+            cursor: pointer;
+        }
+        #arrow1 {
+            top: 50%;
+            position: absolute;
+            transform: rotateY(180deg);
+        }
+        #arrow2 {
+            top: 50%;
+            position: absolute;
+            right: 0px;
+        }
+
+        /* ---------------- Main Content ---------------- */
+        .categories {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        
+        .sectiontitle {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 28px;
+            color: #8b6b4a;
+        }
+
+        .nav2 {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav2 a {
+            text-decoration: none;
+            color: #8b6b4a;
+            font-weight: bold;
+            padding: 10px 15px;
+            border: 1px solid #e1a365;
+            border-radius: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav2 a:hover {
+            background-color: #4d99b9;
+            color: white;
+        }
+        
+        .products {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 25px;
+        }
+        
+        .productcard {
+            border: 1px solid #fbf1f1;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-basis: 23%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: 0.3s ease;
+        }
+
+        .productcard img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .productcard:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+        
+        .product-title {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        /* ---------------- Footer ---------------- */
+        footer {
+            background-color: #94dcee;
+            color: black;
+            padding: 50px 20px 20px;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-evenly;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-column {
+            flex-basis: 20%;
+        }
+        
+        .footimg img {
+            width: 100%;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #8b6b4a;
+        }
+        
+        .footer-column ul {
+            list-style-type: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #d3cece;
+            color: black;
+        }
+
+        /* ---------------- Login Modal ---------------- */
+        .modal-overlay {
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        
+        .login-form-container {
+            background-color: #fefefe;
+            padding: 40px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #aaa;
+            text-decoration: none;
+        }
+        
+        .close-button:hover {
+            color: black;
+        }
+        
+        .login-form-container h2 {
+            color: #8b6b4a;
+            margin-bottom: 20px;
+        }
+
+        .login-form-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .login-form-container input {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .login-form-container button {
+            padding: 12px;
+            background-color: #006400;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .login-form-container button:hover {
+            background-color: #004d00;
+        }
+
+        .modal-overlay:target {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="headercontainer">
+            <div class="logo">Tiny Miny Mo</div>
+            <nav class="nav1">
+            <a href="#">Gifts</a>
+            <a href="#">Shop</a>
+            <a href="#">Keychains</a>
+            <a href="#">Home decor</a>
+            <a href="#">Personal</a>
+            <a href="#">Out of the Box</a>
+            <a href="#">Contact</a>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <button>Search</button>
+                <a href="#loginModal" class="login-button">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Slider (from 2nd code) -->
+    <div id="container">
+        <div class="arrow">
+            <img id="arrow1"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFUdLTauD15ThJdLzsty7HsnALSqiBOq6BMq5BSvJzBBP4Qm19bP1YCS4&s" alt="previous">
+            <img  onclick=changeimg() id="arrow2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFUdLTauD15ThJdLzsty7HsnALSqiBOq6BMq5BSvJzBBP4Qm19bP1YCS4&s" alt="next">
+        </div>
+        <div class="mini">
+            <img src="https://www.tinyminymo.com/cdn/shop/files/Wall-E-3D-Keychain-3_360x.png?v=1741538602" alt="thumb1">
+            <img src="https://www.tinyminymo.com/cdn/shop/files/Plush-Shin-chan-3D-Keychain-7_360x.png?v=1742553966" alt="thumb2">
+            <img src="https://www.tinyminymo.com/cdn/shop/files/Kuromi-Calculator-Keychain-6_180x.jpg?v=1741538085" alt="thumb3">
+            <img src="https://www.tinyminymo.com/cdn/shop/files/Starbucks-Employe-Bear-3D-Keychain-6_180x.jpg?v=1741538621" alt="thumb4">
+        </div>
+    </div>
+
+    <!-- Main -->
+    <main>
+        <div class="categories">
+            <h2 class="sectiontitle">KEY TO YOUR STYLE: UNIQUE KEYCHAINS</h2>
+            <p>Having too many keys is a pain if you don't have something to organise.
+        Car keys, bike keys, house keys, and the list goes on and on. That's when keychains come into play.
+        Keychains might be something that we don't often shop for consciously unless we come across them but they are just as important.
+    .</p>
+            <br>
+            <nav class="nav2">
+                <a href="#">Animal Keychain</a>
+                <a href="#">Unicorn Keychain</a>
+                <a href="#">Food Keychain</a>
+                <a href="#">Bear 3D Keychain</a>
+            </nav>
+        </div>
+        
+        <div class="products">
+            <h2 class="sectiontitle">.</h2>
+            <div class="product-grid">
+                <div class="productcard">
+                    <img src="https://www.tinyminymo.com/cdn/shop/files/Wall-E-3D-Keychain-3_360x.png?v=1741538602" alt="Bead Bracelets">
+                    <div class="product-info">
+                        <h3 class="product-title">Cute Animal Keychain</h3>
+                        <p>Rs.99.9</p>
+                    </div>
+                </div>
+                <div class="productcard">
+                    <img src="https://www.tinyminymo.com/cdn/shop/files/Plush-Shin-chan-3D-Keychain-7_360x.png?v=1742553966" alt="Chain Bracelets">
+                    <div class="product-info">
+                        <h3 class="product-title">Rainbow Unicorn Keychain</h3>
+                        <p>Rs.89.09</p>
+                    </div>
+                </div>
+                <div class="productcard">
+                    <img src="https://www.tinyminymo.com/cdn/shop/files/Kuromi-Calculator-Keychain-6_180x.jpg?v=1741538085" alt="Chains">
+                    <div class="product-info">
+                        <h3 class="product-title">Mini Food Keychain</h3>
+                        <p>Rs.34.56</p>
+                    </div>
+                </div>
+                <div class="productcard">
+                    <img src="https://www.tinyminymo.com/cdn/shop/files/Starbucks-Employe-Bear-3D-Keychain-6_180x.jpg?v=1741538621" alt="Earrings">
+                    <div class="product-info">
+                        <h3 class="product-title">Starbucks Employee Bear 3D Keychain</h3>
+                        <p>Rs.78.90</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal-overlay">
+        <div class="login-form-container">
+            <a href="#" class="close-button">&times;</a>
+            <form>
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Log In</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footimg">
+                <img src="" alt=" Logo">
+            </div>
+            <div class="footer-column">
+                <h3>MY ACCOUNT</h3>
+                <ul>
+                    <li>My Account</li>
+                    <li>Cart</li>
+                    <li>Orders</li>
+                    <li>Checkout</li>
+                    <li>Wishlist</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>CUSTOMER SUPPORT</h3>
+                <ul>
+                    <li>Terms & Conditions</li>
+                    <li>Privacy policy</li>
+                    <li>Shipping & Delivery policy</li>
+                    <li>Refund & Cancellation policy</li>
+                    <li>Payment policy</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>CONTACT INFO</h3>
+                <ul>
+                    <li>online</li>
+                    <li> Madurai.</li>
+                    <li>keychainbtt@gmail.com</li>
+                    <li>www.keychainonline.in</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2023 keychain Online. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Slider JS -->
+    <script src="web.js"></script>
+</body>
+</html>

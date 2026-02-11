@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>College Timetable</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+            width: 90%;
+            background-color: #ffffff;
+        }
+
+        th, td {
+            border: 1px solid #ece2e2;
+            text-align: center;
+            position: relative;
+        }
+
+        th {
+            background-color: #8d9094;
+            color: white;
+        }
+
+        .day {
+            background-color: #ecf0f1;
+            font-weight: bold;
+        }
+
+        .lunch {
+            background-color: #d3aba7;
+            font-weight: bold;
+        }
+
+        td:hover {
+            background-color: #809ba6;
+        }
+
+        /* Tooltip */
+        .subject {
+            cursor: pointer;
+        }
+
+        .subject span {
+            visibility: hidden;
+            opacity: 0;
+            background-color: #2c3e50;
+            color: white;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 13px;
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: opacity 0.3s;
+            white-space: nowrap;
+            z-index: 10;
+        }
+
+        .subject:hover span {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<h2>College Timetable</h2>
+
+<table cellpadding="20" cellspacing="5">
+
+    <tr>
+        <th>Day</th>
+        <th>9:00 - 10:00</th>
+        <th>10:00 - 11:00</th>
+        <th>11:00 - 12:00</th>
+        <th>12:00 - 1:00</th>
+        <th>1:00 - 2:00</th>
+        <th>2:00 - 3:00</th>
+        <th>3:00 - 4:00</th>
+    </tr>
+
+    <tr>
+        <td class="day">Monday</td>
+        <td class="subject">Maths <span>Dr. Ravi Kumar</span></td>
+        <td class="subject">Physics <span>Dr. Anitha</span></td>
+        <td class="subject">C Programming <span>Mr. Suresh</span></td>
+        <td rowspan="5" class="lunch">LUNCH</td>
+        <td class="subject">DBMS <span>Ms. Priya</span></td>
+        <td colspan="2" class="subject">DBMS Lab <span>Ms. Priya</span></td>
+    </tr>
+
+    <tr>
+        <td class="day">Tuesday</td>
+        <td class="subject">Java <span>Mr. Arjun</span></td>
+        <td class="subject">Maths <span>Dr. Ravi Kumar</span></td>
+        <td class="subject">Physics <span>Dr. Anitha</span></td>
+        <td colspan="2" class="subject">Java Lab <span>Mr. Arjun</span></td>
+        <td class="subject">Sports <span>Coach Ramesh</span></td>
+    </tr>
+
+    <tr>
+        <td class="day">Wednesday</td>
+        <td class="subject">DBMS <span>Ms. Priya</span></td>
+        <td class="subject">Java <span>Mr. Arjun</span></td>
+        <td class="subject">Maths <span>Dr. Ravi Kumar</span></td>
+        <td colspan="2" class="subject">Web Technology <span>Ms. Kavitha</span></td>
+        <td class="subject">Library <span>Librarian</span></td>
+    </tr>
+
+    <tr>
+        <td class="day">Thursday</td>
+        <td class="subject">C Programming <span>Mr. Suresh</span></td>
+        <td class="subject">Physics <span>Dr. Anitha</span></td>
+        <td class="subject">DBMS <span>Ms. Priya</span></td>
+        <td colspan="2" class="subject">C Programming Lab <span>Mr. Suresh</span></td>
+        <td class="subject">Seminar <span>Guest Faculty</span></td>
+    </tr>
+
+    <tr>
+        <td class="day">Friday</td>
+        <td class="subject">Web Tech <span>Ms. Kavitha</span></td>
+        <td class="subject">Java <span>Mr. Arjun</span></td>
+        <td class="subject">Maths <span>Dr. Ravi Kumar</span></td>
+        <td colspan="2" class="subject">Project Work <span>Project Guide</span></td>
+        <td class="subject">Counselling <span>Counselor</span></td>
+    </tr>
+
+</table>
+
+</body>
+</html>
